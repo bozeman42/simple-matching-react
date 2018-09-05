@@ -1,0 +1,58 @@
+.Gameboard {
+  background-color: skyblue;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 800px;
+}
+
+.Card {
+  transform: rotate3d(0, 1, 0, 180deg);
+  transition: 1s;
+  margin: 10px;
+  width: 100px;
+  height: 100px;
+  transform-style: preserve-3d;
+  line-height: 100px;
+}
+
+.Card-front {
+  background-color: palegoldenrod;
+  font-size: 45px;
+  position: absolute;
+  backface-visibility: hidden;
+  top:0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.Card.flipped{
+  transition: 1s;
+  transform: rotate3d(0,0,0,0deg);
+}
+
+.Card-back {
+  position: absolute;
+  transform: rotate3d(0, 1, 0, 180deg);
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: purple;
+  backface-visibility: hidden;
+  transition: 1s;
+}
+
+.locked > .Card-front {
+  transition: 1s;
+  background-color: green;
+  color: whitesmoke;
+}
+
+.card-container {
+  flex: 20%;
+  display: flex;
+  justify-content: center;
+}
