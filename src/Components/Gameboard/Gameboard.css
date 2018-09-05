@@ -4,17 +4,23 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  max-width: 800px;
+  align-items: center;
+  max-width: 600px;
+  border-radius: 50px;
 }
 
 .Card {
   transform: rotate3d(0, 1, 0, 180deg);
-  transition: 1s;
+  transition: .25s;
   margin: 10px;
   width: 100px;
   height: 100px;
   transform-style: preserve-3d;
   line-height: 100px;
+}
+
+.Card > * {
+  border-radius: 50%;
 }
 
 .Card-front {
@@ -29,7 +35,6 @@
 }
 
 .Card.flipped{
-  transition: 1s;
   transform: rotate3d(0,0,0,0deg);
 }
 
@@ -42,11 +47,10 @@
   width: 100%;
   background-color: purple;
   backface-visibility: hidden;
-  transition: 1s;
 }
 
 .locked > .Card-front {
-  transition: 1s;
+  transition: .25s;
   background-color: green;
   color: whitesmoke;
 }
